@@ -1,0 +1,508 @@
+<div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+  <button class="nav-link active" id="nav-instagram-tab" data-toggle="tab" data-target="#nav-instagram" type="button" role="tab" aria-controls="nav-instagram" aria-selected="true" style="padding: 10px;"><i class="fab fa-instagram"></i> Instagram</button>
+  <!--<button class="nav-link" id="nav-threads-tab" data-toggle="tab" data-target="#nav-threads" type="button" role="tab" aria-controls="nav-threads" aria-selected="false" style="padding: 10px;"><i class="fas fa-at"></i> Threads</button>-->
+  </div>
+  <div class="tab-content" id="nav-tabContent">
+  <!--INSTAGRAM HTML-->
+  <div class="tab-pane fade show active" id="nav-instagram" role="tabpanel" aria-labelledby="nav-instagram-tab">
+    <div class="card shadow-lg">
+      <div class="card-header py-3 h5">
+        <div class="d-flex bd-highlight p-0">
+        <div class="mr-auto bd-highlight mt-2">
+          <i class="fab fa-instagram"></i>
+            <span class="uidUser">UID</span> | <span class="state_username">State</span>
+            <span class="fb_v2_uid" style="display: none;">V2_UID</span>
+        </div>
+        <div class="bd-highlight">
+          <button class="btn btn-md metu inbtn"><i class="fas fa-power-off"></i> metu</button>
+          <button class="btn btn-md cleanLocalstorage inbtn"><i class="fas fa-trash-alt"></i> Clean</button>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="contain">
+        <div class="profile">
+          <div class="profile-image">
+          <img src="asset/blank.jpg" width="140" height="140" class="imagelow" data-toggle="modal" data-target="#editphoto">
+          </div>
+          <div class="profile-user-settings">
+          <h1 class="profile-user-name inusername">Username</h1>
+          <button class="editbtn profile-edit-btn edit_profile" data-toggle="modal" data-target="#editprofile"><i class="fas fa-pen"></i> Edit Profile</button>
+          <!--<span class="editbtn profile-settings-btn" aria-label="profile settings">
+            <i class="fas fa-cog" data-toggle="modal" data-target="#setting_accounts"></i>
+          </span>-->
+          </div>
+          <div class="profile-stats">
+          <ul>
+            <li>
+            <span class="profile-stat-count posting">0</span> posts
+            </li>
+            <li>
+            <span class="profile-stat-count followers">0</span> followers
+            </li>
+            <li>
+            <span class="profile-stat-count following">0</span> following
+            </li>
+          </ul>
+          </div>
+          <div class="profile-bio">
+          <span class="profile-real-name realname">NAMA FULL NAME</span>
+          <span class="profile-bio-quote quote">PLEASE WAIT... 📷✈️🏕️</span>
+          <a href="#" target="_blank" class="highlink">
+            <span class="profile-bio-link biolink">BIO LINK MU</span>
+          </a>
+          </div>
+          <div class="uploading" >
+            <span class="photos" data-toggle="modal" data-target="#postid"><i class="fa fa-plus"></i> Create Post</span>
+            <span class="storys" data-toggle="modal" data-target="#storyid"><i class="fa fa-plus"></i> Create Story</span>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="d-flex justify-content-between text-uppercase">
+      <div class="me-auto">
+        <ul class="list-group">
+        <li class="list-group-item"><i class="far fa-hand-paper"></i> Jumlah : <span class="jumlah">0</span> | <i class="far fa-hand-point-right"></i> Null : <span class="nulled">0</span>
+        </li>
+        <li class="list-group-item"><i class="far fa-thumbs-up"></i> Sukses : <span class="sukses">0</span> | <i class="far fa-thumbs-down"></i> Gagal : <span class="gagal">0</span>
+        </li>
+        </ul>
+      </div>
+      <div class="bd-highlight">
+        <ul class="list-group">
+        <li class="list-group-item">
+          <div class="input-group">
+          <select class="form-select igtools p-1 text-uppercase" style="width:130px;">
+            <option selected>Tools</option>
+            <option value="sessionid">Get Session</option>
+            <option value="clone">Clone Akun</option>
+            <option value="follow">Follow</option>
+            <option value="likeuid">Like</option>
+            <option value="commentuid">Comment</option>
+            <option value="dmpeople">DM People</option>
+            <option value="dmgroup">DM Group</option>
+            <option value="send_dm">Send Dm</option>
+            <option value="approve">Approve Dm</option>
+          </select>
+          <button class="btn btn-md inbtn toolkit"><i class="fas fa-bug"></i> tamper</button>
+          <select class="form-select uidgrab p-1 text-uppercase" style="width:130px;">
+            <option selected>Uid</option>
+            <option value="massuid">Mass Uid Grab</option>
+            <option value="uidfollowers">Followers</option>
+            <option value="uidfollowing">Following</option>
+            <option value="userpost">Media ID</option>
+            <option value="uidlike">Liker Post</option>
+            <option value="graphql">GraphQL</option>
+            <option value="threadid">Thread Id</option>
+            <option value="usernametouid">Username To Uid</option>
+            <option value="check">Filter Akun</option>
+          </select>
+          <button class="btn btn-md inbtn grabber"><i class="fas fa-users"></i> uid</button>
+          </div>
+          <div class="input-group">
+          <input type="number" class="form-control text-center delayed" style="width:30px;" placeholder="Delay" value="10">
+          </div>
+        </li>
+        </ul>
+      </div>
+      </div>
+      <div class="card shadow">
+      <div class="card-header py-3 text-uppercase h5 text-center">
+        <div class="d-flex bd-highlight p-0">
+        <div class="mr-auto bd-highlight">
+          <i class="fas fa-user-cog"></i> <span class="onehtc"></span>
+        </div>
+        <div class="bd-highlight showSelect">
+          <div class="loadUserChoose">
+          <div class="radio radio-info radio-inline">
+            <input type="radio" id="text_dm" value="sendDMtext" name="radioInline">
+            <label for="text_dm"> Text</label>
+          </div>
+          <div class="radio radio-inline">
+            <input type="radio" id="link_dm" value="sendDMlink" name="radioInline">
+            <label for="link_dm"> Link</label>
+          </div>
+          </div>
+        </div>
+        <div class="bd-highlight uidmassal">
+          <div class="loadUserChoose">
+            <div class="radio radio-info radio-inline">
+            <input type="radio" id="followermass" value="followers" name="getmass_uid">
+            <label for="followermass"> Follower</label>
+            </div>
+            <div class="radio radio-inline">
+            <input type="radio" id="followingmass" value="following" name="getmass_uid">
+            <label for="followingmass"> Following</label>
+            </div>
+          </div>
+          </div>
+        <div class="bd-highlight uidType">
+          <div class="loadUserChoose">
+          <div class="radio radio-info radio-inline">
+            <input type="radio" id="publicuid" value="uidPublic" name="chooseUID">
+            <label for="publicuid"> Public</label>
+          </div>
+          <div class="radio radio-inline">
+            <input type="radio" id="privateuid" value="uidPrivate" name="chooseUID">
+            <label for="privateuid"> Private</label>
+          </div>
+          </div>
+        </div>
+        <div class="bd-highlight profilesetting">
+          <div class="loadUserChoose">
+          <div class="radio radio-info radio-inline">
+            <input type="radio" id="setassprofile" value="profileUpdate" name="profileClone">
+            <label for="setassprofile"> Set Profile</label>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row openHemmer">
+        <div class="col-xl-8 col-lg-7">
+          <div class="input-group mb-1">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fas fa-external-link-alt mr-1"></i> OPEN </span>
+          <textarea class="form-control idusergen" placeholder="GENERATE LINK ID"></textarea>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="input-group mb-1">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fas fa-external-link-alt mr-1"></i> WEB </span>
+          <input type="text" class="form-control canonical" placeholder="CUSTOM CANONICAL">
+          </div>
+          <div class="input-group">
+          <input type="text" class="form-control customimage" placeholder="IMAGE URL / UPLOAD">
+          <input type="file" class="form-control base64Branch" hidden>
+          <span class="input-group-text uploadBranch" title="Custom Url Atau Klik Upload">
+            <i class="fa fa-upload"></i>
+          </span>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="card-group pred">
+      <div class="card shadow">
+        <div class="card-header py-3 text-uppercase h5">
+        <i class="fas fa-users"></i> uid
+        </div>
+        <div class="card-body">
+        <div class="input-group mb-1">
+          <span class="input-group-text stoped"> STOP </span>
+          <textarea class="form-control uid" cols="10" rows="10" placeholder="UID | THREAD ID | USER GET MEDIA ID | ACTIVE"></textarea>
+        </div>
+        </div>
+      </div>
+      <div class="card shadow">
+        <div class="card-header py-3 text-uppercase h5">
+        <div class="d-flex bd-highlight">
+          <div class="mr-auto bd-highlight">
+          <i class="fas fa-tools"></i> miscellaneous
+          </div>
+          <div class="bd-highlight">
+          <span class="misc mr-1">0</span> <i class="fas fa-circle" title=""></i>
+          </div>
+        </div>
+        </div>
+        <div class="card-body">
+        <textarea class="form-control commit" cols="10" rows="10" placeholder="KEY_LIVE | COMMENT | TEXT DM | USERNAME CLONE | USERNAME GRAB UID | MEDIA ID | CHECK AKUN | MASS UID TO UID"></textarea>
+        </div>
+      </div>
+      </div>
+      <div class="card shadow text-center mb-2 kuki">
+      <div class="card-header py-3 text-uppercase h5">
+        <i class="fas fa-cookie-bite"></i> SESSION AUTH COOKIE
+      </div>
+      <div class="card-body">
+        <textarea class="form-control cookiesid" cols="10" rows="10" placeholder="Session Cookie Result"></textarea>
+      </div>
+      </div>
+      <div class="border">
+      <i class="fas fa-bug"></i>
+      <span class="consolelog text-uppercase"> DEBUG LOGGING</span>
+      </div>
+        <span class="img_url" style="display:none;"></span>
+      <button class="sandianyar" data-toggle="modal" data-target="#editSandi" style="display:none;"></button>
+      <button class="codemail" data-toggle="modal" data-target="#codeemail" style="display:none;"></button>
+      <!--Modal-->
+      <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+          <i class="fas fa-user-cog"></i> Edit Profile
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Full Name</span>
+          </div>
+          <input type="text" class="form-control fullname" placeholder="Full name" readonly>
+          </div>
+          <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Username</span>
+          </div>
+          <input type="text" class="form-control usernameprofile" placeholder="Username" readonly>
+          </div>
+          <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Bio</span>
+          </div>
+          <textarea class="form-control biograpfy" cols="5" rows="5" placeholder="Biography"></textarea>
+          <div class="input-group-prepend">
+            <span class="input-group-text biobuild">Extend</span>
+          </div>
+          </div>
+          <div class="input-group mb-1">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon1">Url</span>
+          </div>
+          <input type="url" class="form-control websiteLink" placeholder="Bio Website" readonly>
+          <div class="input-group-append shortBranch">
+            <button class="btn btn-md generatebranch" type="button">generate</button>
+          </div>
+          </div>
+          <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+          </div>
+          <input type="text" class="form-control ikiemail" placeholder="Email" readonly>
+          </div>
+        </div>
+        <div class="modal-footer mx-auto">
+          <button type="button" class="btn inbtn editaccount"><i class="fas fa-cog"></i> Simpan</button>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Modal-->
+      <!--Modal Poto-->
+      <div class="modal fade" id="editphoto" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+          <i class="fas fa-user-cog mr-1"></i> Ganti Profile
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+          <input type="file" class="form-control-file changepict mb-2">
+          <p class="base64" style="display: none;"></p>
+          <img src="asset/blank.jpg" width="500" height="450" class="img_preview img-thumbnail mb-2">
+          <button type="button" class="btn btn-md btn-block inbtn uploadimage"><i class="fa fa-upload"></i> Upload</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Modal Poto-->
+       <!--Modal upload Poto-->
+       <div class="modal fade" id="postid" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+          <i class="fas fa-image mr-2"></i>Create Post
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+          <input type="file" class="form-control-file uploadid mb-2">
+          <p class="uploadbase64" style="display: none;"></p>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+              <img src="asset/ig.png" width="150" height="200" class="imgupload img-thumbnail">
+              </span>
+            </div>
+            <textarea class="form-control p-3 captiontext" placeholder="Deskripsi Upload"></textarea>
+          </div>
+          <button type="button" class="btn btn-md btn-block inbtn uploadpost"><i class="fa fa-upload"></i> Create</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Modal upload Poto-->
+      <!--Modal upload story-->
+      <div class="modal fade" id="storyid" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+          <i class="fas fa-image mr-2"></i>Create Story
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+          <input type="file" class="form-control-file storyids mb-2">
+          <p class="uploadstorybase64" style="display: none;"></p>
+          <div class="input-group mb-2">
+            <input type="text" class="form-control link_story" placeholder="Link url" readonly>
+            <div class="input-group-append">
+              <button class="btn btn-md createlinkstory inbtn" type="button">generate</button>
+            </div>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+              <img src="asset/ig.png" width="150" height="200" class="imgstory img-thumbnail">
+              </span>
+            </div>
+            <textarea class="form-control p-3 linkstorycaption" placeholder="Link Deskripsi"></textarea>
+          </div>
+          <button type="button" class="btn btn-md btn-block inbtn uploadstory"><i class="fa fa-upload"></i> Create</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Modal upload story-->
+      <!--Modal code-->
+      <div class="modal fade" id="codeemail" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+          <i class="fas fa-lock"></i> Submit Code
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3 four">
+          <span class="input-group-text" id="as">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input type="text" class="form-control code_email" placeholder="Dele kene Code Mu" aria-describedby="as">
+          <button type="button" class="btn inbtn mx-auto submitcode">Submit Code</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Modal code-->
+      <!--Modal sandi-->
+      <div class="modal fade" id="editSandi" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+          <i class="fas fa-lock"></i> Ganti Sandi
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3 four">
+          <span class="input-group-text" id="as">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input type="text" class="form-control sandiBaru" placeholder="Dele kene Sandi Mu" aria-describedby="as">
+          <button type="button" class="btn inbtn mx-auto sandiganti">Ganti Sandi</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Modal sandi-->
+      <!--Setting-->
+      <div class="modal fade" id="setting_accounts" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header modal-title nav nav-tabs " id="nav-tab" role="tablist">
+          <button class="nav-link active" id="email-tab" data-toggle="tab" data-target="#email" type="button" role="tab" aria-controls="nav-email" aria-selected="true"><i class="fas fa-at"></i> Ganti Email</button>
+          <button type="button" class="close p-4" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="email" role="tabpanel" aria-labelledby="email-tab">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-at"></i></span>
+                </div>
+                <input type="text" class="form-control newmail" placeholder="New Email">
+              </div>
+              <button type="button" class="btn btn-md btn-block inbtn changeemail"><i class="fas fa-cog"></i> Simpan</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <!--Setting-->
+  </div>
+
+  <!--THREAD HTML-->
+
+  <div class="tab-pane fade" id="nav-threads" role="tabpanel" aria-labelledby="nav-threads-tab">
+    <div class="card shadow">
+      <div class="card-header py-3 h5">
+        <div class="d-flex bd-highlight p-0">
+          <div class="mr-auto bd-highlight mt-2">
+            <i class="fas fa-at"></i>
+              <span class="uid_thread">UID</span>
+          </div>
+          <div class="bd-highlight">
+            <button class="btn btn-md inbtn metuThreads"><i class="fas fa-power-off"></i> metu</button>
+            <button type="button" class="btn inbtn btn-md import_account"><i class="fas fa-arrow-alt-circle-up"></i> Import Account</button>
+          </div>
+          </div>
+      </div>
+      <div class="card-body">
+        <div class="contain_threads">
+          <div class="profile_threads">
+            <div class="threads_profile">
+              <img src="asset/blank.jpg" width="140" height="140" class="imgThreads">
+            </div>
+            <div class="threads_personal">
+              <div class="profile_threads_settings">
+                <h1 class="fullname_threads fullnameThreads">Full Name</h1>
+              </div>
+              <div class="threads_bio">
+                <span class="username_threads usernameThreads">Username </span>
+                <span class="quotes quotesThreads mt-2">PLEASE WAIT... 📷✈️🏕️</span>
+              </div>
+              <div class="followers_link">
+                <span class="followersThreads">0</span> followers <a href="#" class="pointerThreads" target="_blank"><span class="threads_links bioLinkThreads">https://BioLink.com</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group" role="group">
+            <span class="threads_btn"><i class="fa fa-plus"></i> Edit Profile</span>
+            <span class="threads_btn"><i class="fa fa-plus"></i> Post Image</span>
+            <span class="threads_btn"><i class="fa fa-plus"></i> Buat Status</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border">
+      <i class="fas fa-bug"></i>
+      <span class="threads_env text-uppercase"> DEBUG LOGGING</span>
+    </div>
+  </div>
+</div>
