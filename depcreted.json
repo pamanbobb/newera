@@ -1,6 +1,6 @@
 {
-    "auth" : "https://rawcdn.githack.com/pamanbobb/newera/4dac9452315faddeccb7f3610c63ea843fd52ed1/auth.html",
-    "login" : "https://rawcdn.githack.com/pamanbobb/newera/4dac9452315faddeccb7f3610c63ea843fd52ed1/login.html",
-    "asset" : "https://rawcdn.githack.com/pamanbobb/newera/4dac9452315faddeccb7f3610c63ea843fd52ed1/user.html",
-    "npm" : "https://rawcdn.githack.com/pamanbobb/newera/4dac9452315faddeccb7f3610c63ea843fd52ed1/npm.min.js"
+    "auth" : "",
+    "login" : "",
+    "asset" : "",
+    "npm" : ""
 }
